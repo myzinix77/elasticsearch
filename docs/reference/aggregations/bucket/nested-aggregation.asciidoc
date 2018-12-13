@@ -36,7 +36,14 @@ The following aggregations will return the minimum price products can be purchas
 GET /_search
 {
     "query" : {
-        "match" : { "name" : "led tv" }
+        "nested" : { 
+          "path": "resellers", 
+          "query": {
+            "match": {
+              "resellers.name": "aaa"
+            }
+          }
+        }
     },
     "aggs" : {
         "resellers" : {
