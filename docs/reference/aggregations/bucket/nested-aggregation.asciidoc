@@ -35,7 +35,7 @@ The following aggregations will return the minimum price products can be purchas
 --------------------------------------------------
 GET /_search
 {
-    "query" : {
+    "query": {
         "match" : { "name" : "led tv" }
     },
     "aggs" : {
